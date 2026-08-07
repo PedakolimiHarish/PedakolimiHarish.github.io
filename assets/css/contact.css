@@ -1,0 +1,94 @@
+@layer sections {
+  /*==========================================================
+  Contact
+  ==========================================================*/
+
+  .c-contact {
+    max-width: 74rem;
+
+    margin-left: 15;
+    padding-bottom: var(--space-8);
+  }
+
+  .c-contact__title {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 1.05;
+  }
+
+  .c-contact__lede {
+    max-width: 44rem;
+    margin-top: var(--space-5);
+
+    color: var(--color-text-muted);
+
+    font-size: 1.15rem;
+  }
+
+  .c-contact__details {
+    display: grid;
+    gap: var(--space-5);
+
+    margin-top: var(--space-8);
+  }
+
+  .c-contact__item {
+    padding-bottom: var(--space-4);
+
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .c-contact__label {
+    display: block;
+
+    margin-bottom: var(--space-2);
+
+    color: var(--color-accent);
+
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .c-contact__item a,
+  .c-contact__item p {
+    color: var(--color-text);
+
+    font-size: 1.1rem;
+  }
+
+  .c-contact__item a:hover {
+    color: var(--color-accent);
+  }
+
+  .c-contact__actions {
+    margin-top: var(--space-8);
+  }
+}
+
+@media (max-width: 48rem) {
+  .c-contact {
+    padding-bottom: var(--space-8);
+  }
+
+  .c-contact__title {
+    font-size: 3rem;
+  }
+}
+
+.c-contact__copied {
+  margin-top: var(--space-4);
+
+  color: var(--color-accent);
+
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.c-contact__copied.is-visible {
+  opacity: 1;
+}

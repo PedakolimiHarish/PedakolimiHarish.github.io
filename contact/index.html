@@ -1,39 +1,88 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, nofollow">
+    <!-- =========================================================
+         Document Metadata
+    ========================================================== -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080B0F" />
+    <meta name="author" content="Pedakolimi Harish" />
+
     <title>Contact | Pedakolimi Harish</title>
-    <meta name="description" content="Contact Pedakolimi Harish for robotics software engineering opportunities and collaboration.">
-    <link rel="canonical" href="https://pedakolimiharish.github.io/contact/">
-    <link rel="stylesheet" href="/assets/css/site.css">
+
+    <meta
+      name="description"
+      content="Get in touch with Pedakolimi Harish for robotics software engineering opportunities, research collaboration, and technical discussions."
+    />
+
+    <link rel="canonical" href="https://pedakolimiharish.github.io/contact/" />
+
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <link rel="stylesheet" href="/assets/css/contact.css" />
+
+    <script src="/assets/js/components.js" defer></script>
     <script src="/assets/js/site.js" defer></script>
   </head>
+
   <body class="page page--contact">
     <a class="c-skip-link" href="#main-content">Skip to content</a>
 
-    <header class="c-site-header">
-      <nav class="c-navbar l-container" aria-label="Primary navigation">
-        <a class="c-navbar__brand" href="/" aria-label="Pedakolimi Harish portfolio home"><span class="c-navbar__brand-mark" aria-hidden="true">PH</span><span>Pedakolimi Harish</span></a>
-        <button class="c-navbar__toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-site-menu-toggle><span class="c-navbar__toggle-icon" aria-hidden="true"></span><span class="u-visually-hidden">Toggle navigation</span></button>
-        <ul class="c-navbar__menu" id="primary-navigation" data-site-menu data-open="false">
-          <li><a class="c-navbar__link" href="/">Home</a></li>
-          <li><a class="c-navbar__link" href="/projects/">Projects</a></li>
-          <li><a class="c-navbar__link" href="/resume/">Resume</a></li>
-          <li><a class="c-navbar__link" href="/contact/" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="site-header"></div>
 
-    <main class="l-page-main l-container l-page-intro" id="main-content">
-      <p class="c-eyebrow">Professional contact</p>
-      <h1 class="c-page-title">Contact</h1>
-      <p class="c-page-lede">For robotics software engineering opportunities, collaboration, or technical discussion, email me directly.</p>
-      <div class="c-button-group u-space-top-6"><a class="c-button c-button--primary" href="mailto:Pedakolimi.Harish@gmail.com">Email Pedakolimi Harish</a></div>
-      <p class="c-status-note">Verified GitHub and LinkedIn profile links will be added when their public URLs are supplied.</p>
+    <main class="l-page-main" id="main-content">
+      <!-- =====================================================
+           Page Header
+      ====================================================== -->
+
+      <section class="c-page-header l-container">
+        <p class="c-page-header__title">Pedakolimi Harish</p>
+
+        <p class="c-page-header__subtitle">Robotics Software Engineer</p>
+      </section>
+
+      <!-- =====================================================
+           Contact
+      ====================================================== -->
+
+      <section class="c-contact l-container">
+        <h1 class="c-contact__title">Contact</h1>
+
+        <p class="c-contact__lede">
+          I'm always interested in robotics software engineering roles, research
+          collaborations, open-source projects, and technical discussions.
+        </p>
+
+        <div class="c-button-group c-contact__actions">
+          <button class="c-button" id="copy-email-button" type="button">
+            Copy Email
+          </button>
+
+          <a
+            class="c-button c-button--github"
+            href="https://github.com/PedakolimiHarish"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            class="c-button c-button--linkedin"
+            href="https://www.linkedin.com/in/pedakolimi-harish/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+
+        <p class="c-contact__copied" id="email-copied-message">
+          Email copied to clipboard!
+        </p>
+      </section>
     </main>
 
-    <footer class="c-site-footer"><div class="c-site-footer__content l-container"><p class="c-site-footer__label">Pedakolimi Harish · Robotics Engineer</p><p>© <span data-current-year>2026</span></p></div></footer>
+    <div id="site-footer"></div>
   </body>
 </html>
