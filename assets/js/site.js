@@ -429,8 +429,8 @@ async function loadExperienceItems() {
   }
 
   const experienceItems = [
-    "/assets/experience_assets/project_demo/project_demo.html",
-    "/assets/experience_assets/project_atlas/project_atlas.html",
+    /* "/assets/experience_assets/project_demo/project_demo.html", */
+    /* uncomment this if you want to test something */
   ];
 
   for (const itemPath of experienceItems) {
