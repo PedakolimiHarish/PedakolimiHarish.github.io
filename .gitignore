@@ -29,12 +29,3 @@ desktop.ini
 *.swp
 *.swo
 
-# ============================================
-# Local Development Notes
-# (remove this line if you later want to publish them)
-# ============================================
-
-README.md
-CHANGELOG.md
-TODO.md
-docs/
