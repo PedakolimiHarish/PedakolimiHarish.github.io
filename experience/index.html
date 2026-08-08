@@ -27,9 +27,12 @@
 
     <link rel="stylesheet" href="/assets/css/site.css" />
     <link rel="stylesheet" href="/assets/css/experience.css" />
+    <link rel="stylesheet" href="/assets/css/experience-items.css" />
+    <link rel="stylesheet" href="/assets/css/tech-badges.css" />
 
     <script src="/assets/js/components.js" defer></script>
     <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/js/tech-badges.js" defer></script>
   </head>
 
   <body class="page page--experience">
@@ -133,117 +136,27 @@
           </div>
         </section>
       </section>
-
-      <!-- =====================================================
-      ====================================================== -->
-      <!-- =====================================================
+      <!-- =====================================================================
           Detailed Experience
-      ====================================================== -->
-      <!-- =====================================================
-      ====================================================== -->
+      ====================================================================== -->
 
       <section class="c-timeline l-container">
-        <!-- =====================================================
-            Project Ember
-        ====================================================== -->
-
-        <article class="c-timeline-item" id="project-ember">
-          <div class="c-timeline-item__line">
-            <div class="c-timeline-item__dot"></div>
-          </div>
-
-          <div class="c-timeline-item__content">
-            <p class="c-timeline-item__year">2026</p>
-
-            <div class="c-timeline-item__badges">
-              <span class="c-badge c-badge--personal"> Personal Project </span>
-
-              <span class="c-badge c-badge--concept"> Concept Stage </span>
-            </div>
-
-            <h2 class="c-timeline-item__title">Project Ember</h2>
-
-            <p class="c-timeline-item__subtitle">
-              Open Source AI Companion Robot Platform
-            </p>
-
-            <p class="c-timeline-item__summary">
-              Project Ember is an open-source robotics platform focused on
-              autonomous navigation, embedded software, computer vision, ROS 2,
-              and AI-assisted interaction. The project is currently in its
-              concept and platform architecture phase.
-            </p>
-
-            <ul class="c-tech-list">
-              <li>ROS 2</li>
-              <li>C++</li>
-              <li>Python</li>
-              <li>OpenCV</li>
-              <li>Embedded Linux</li>
-            </ul>
-
-            <!-- =====================================================
-                Gallery
-            ====================================================== -->
-
-            <div class="c-gallery">
-              <img
-                src="/assets/images/project-ember/test1.jpg"
-                alt="Project Ember"
-              />
-
-              <img
-                src="/assets/images/project-ember/test2.jpg"
-                alt="Project Ember"
-              />
-
-              <img
-                src="/assets/images/project-ember/test3.jpg"
-                alt="Project Ember"
-              />
-            </div>
-
-            <!-- =====================================================
-                Videos
-            ====================================================== -->
-
-            <div class="c-video-list">
-              <video controls>
-                <source src="/assets/videos/project-ember/test.mp4" />
-              </video>
-            </div>
-
-            <!-- =====================================================
-                Read More
-            ====================================================== -->
-
-            <button class="c-read-more" type="button">Read More</button>
-
-            <div class="c-read-more__content">
-              <p>
-                Project Ember is designed as a modular robotics platform that
-                combines embedded firmware, ROS 2, computer vision, AI
-                interaction, and web technologies into a single extensible
-                architecture.
-              </p>
-
-              <p>
-                The current focus is on platform development, including hardware
-                integration, motion control, software architecture, and reusable
-                robotics components before introducing higher-level AI
-                capabilities.
-              </p>
-
-              <p>
-                Once the robotics platform reaches maturity, the project will
-                expand toward intelligent companion behaviors, perception,
-                memory, and natural human-robot interaction.
-              </p>
-            </div>
-          </div>
-        </article>
+        <div id="experience-items"></div>
+        <!-- Experience/project items are loaded dynamically -->
       </section>
     </main>
+
+    <!-- ==========================================================
+        Image Viewer
+    ========================================================== -->
+
+    <div class="c-lightbox" id="lightbox">
+      <div class="c-lightbox-content">
+        <img id="lightbox-image" alt="" />
+
+        <p class="c-lightbox-caption" id="lightbox-caption"></p>
+      </div>
+    </div>
 
     <!-- =========================================================
          Site Footer

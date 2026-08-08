@@ -1,0 +1,986 @@
+/* ==========================================================
+   Experience Item
+========================================================== */
+
+.c-timeline-item {
+  position: relative;
+
+  margin-left: 4rem;
+  margin-bottom: 6rem;
+}
+
+/* ==========================================================
+   Timeline Marker
+========================================================== */
+
+.c-timeline-item::before {
+  content: "";
+
+  position: absolute;
+
+  /* Center the dot directly on the timeline */
+  left: calc(-3rem - 6px);
+  top: 0.45rem;
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: var(--color-accent);
+
+  box-shadow:
+    0 0 0 4px var(--color-surface),
+    0 0 0 5px var(--color-border);
+}
+
+/* ==========================================================
+   Year
+========================================================== */
+
+.c-timeline-item__year {
+  margin-bottom: 0.5rem;
+
+  color: var(--color-text-muted);
+
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================
+   Badges
+========================================================== */
+
+.c-timeline-item__badges {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.6rem;
+
+  margin-bottom: 1rem;
+}
+
+.c-badge {
+  padding: 0.35rem 0.8rem;
+
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.c-badge--personal {
+  color: var(--color-accent);
+
+  background: rgb(94 228 255 / 0.08);
+
+  border: 1px solid rgb(94 228 255 / 0.2);
+}
+
+.c-badge--concept {
+  color: #f7c948;
+
+  background: rgb(247 201 72 / 0.08);
+
+  border: 1px solid rgb(247 201 72 / 0.25);
+}
+
+/* ==========================================================
+   Project Title
+========================================================== */
+
+.c-timeline-item__title {
+  margin-bottom: 0.35rem;
+
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.c-timeline-item__subtitle {
+  margin-bottom: 1.5rem;
+
+  color: var(--color-text-muted);
+
+  font-size: 1.2rem;
+}
+
+.c-timeline-item__summary {
+  max-width: 60rem;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.9;
+  margin: 0;
+}
+
+.c-timeline-item__summary p {
+  margin: 0 0 1rem;
+}
+
+.c-timeline-item__summary p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Technology Badge List
+========================================================== */
+
+.c-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.75rem;
+
+  margin: 1.5rem 0 0.75rem;
+  padding: 0;
+
+  list-style: none;
+}
+
+.c-tech-list li {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* ==========================================================
+   Read More Button
+========================================================== */
+
+.c-read-more {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 0.45rem;
+
+  padding: 0.35rem 0.8rem;
+
+  border: 1px solid rgb(94 228 255 / 0.2);
+  border-radius: 999px;
+
+  background: rgb(94 228 255 / 0.08);
+
+  color: var(--color-accent);
+
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+}
+
+.c-read-more:hover {
+  background: rgb(94 228 255 / 0.08);
+
+  border-color: rgb(94 228 255 / 0.2);
+
+  color: var(--color-accent);
+}
+
+/* ==========================================================
+   Expand Animation
+========================================================== */
+
+.c-expand-content {
+  display: none;
+  margin-top: 1rem;
+  animation: fadeDown 0.3s ease;
+}
+
+.c-expand-content.is-open {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  gap: 1rem;
+
+  align-items: stretch;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================
+   Experience Cards
+========================================================== */
+
+.c-experience-card {
+  min-width: 0;
+  height: 34rem;
+
+  padding: 1.5rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+}
+
+/* ==========================================================
+   Card Header
+========================================================== */
+
+.c-card-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.c-card-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.55rem;
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+/* ==========================================================
+   Section Icons
+========================================================== */
+
+.c-section-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  flex-shrink: 0;
+
+  color: var(--color-accent);
+}
+
+/* ==========================================================
+   Project Overview
+========================================================== */
+
+.c-experience-card--overview {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 34rem;
+}
+
+.c-project-info__content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.c-project-info__content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.c-project-info__content::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+
+  border-radius: 999px;
+}
+
+.c-project-info__content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+.c-project-info__content p {
+  margin: 0 0 1.5rem;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.c-project-info__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   Overview Content Scroll
+========================================================== */
+
+.c-experience-card--overview .c-project-info__content {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-right: 1rem;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
+}
+
+.c-experience-card--overview .c-project-info__content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.c-experience-card--overview .c-project-info__content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.c-experience-card--overview .c-project-info__content::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 999px;
+}
+
+/* ==========================================================
+   Media Card
+========================================================== */
+
+.c-experience-card--media {
+  height: 34rem;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 1.5rem;
+
+  min-height: 0;
+}
+
+/* ==========================================================
+   Media Section
+========================================================== */
+
+.c-experience-card--media .c-media-section {
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ==========================================================
+   Media Carousel
+========================================================== */
+.c-media-carousel {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Leave room on both sides for the arrows */
+.c-media-carousel .c-gallery-slider {
+  padding: 0 3rem;
+}
+
+/* ==========================================================
+   Gallery Images
+========================================================== */
+
+.c-gallery-slider {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+
+  gap: 1rem;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+.c-gallery-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.c-gallery-slider img {
+  flex: 0 0 50%;
+
+  width: 50%;
+  height: 9rem;
+
+  margin-top: 0;
+
+  object-fit: cover;
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+
+  cursor: zoom-in;
+
+  transition: border-color 0.25s ease;
+}
+
+.c-gallery-slider img:hover {
+  border-color: var(--color-accent);
+}
+
+/* ==========================================================
+   Video Slider
+========================================================== */
+
+.c-video-slider {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  gap: 1rem;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+.c-video-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.c-video-slider video {
+  flex: 0 0 50%;
+
+  width: 50%;
+  max-width: 50%;
+  max-height: 100%;
+
+  margin: 0 auto;
+
+  aspect-ratio: 16 / 10;
+
+  object-fit: contain;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   Video Player
+========================================================== */
+
+.c-video-player {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  overflow: hidden;
+}
+
+/* ==========================================================
+   Video
+========================================================== */
+
+.c-video-player video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* ==========================================================
+   Video Caption
+========================================================== */
+
+.c-video-caption {
+  position: absolute;
+
+  left: 1rem;
+  right: 1rem;
+  bottom: 3.5rem;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  line-height: 1.4;
+
+  text-align: center;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+/*
+  Show caption when video player is fullscreen
+*/
+
+.c-video-player:fullscreen .c-video-caption {
+  opacity: 1;
+}
+
+/* WebKit fullscreen support */
+
+.c-video-player:-webkit-full-screen .c-video-caption {
+  opacity: 1;
+}
+
+/* ==========================================================
+   Custom Fullscreen Button
+========================================================== */
+
+.c-video-fullscreen {
+  position: absolute;
+
+  right: 1rem;
+  bottom: 1rem;
+
+  width: 2.2rem;
+  height: 2.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+
+  background: rgb(8 11 15 / 80%);
+
+  color: var(--color-text);
+
+  cursor: pointer;
+
+  z-index: 5;
+}
+
+.c-video-fullscreen:hover {
+  background: var(--color-accent);
+  color: #000;
+}
+
+/* ==========================================================
+   Video Carousel Items
+========================================================== */
+
+.c-video-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.c-video-slider .c-video-player {
+  flex: 0 0 48%;
+  width: 48%;
+  min-width: 48%;
+  scroll-snap-align: start;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+/* Actual video size inside each carousel item */
+
+.c-video-slider .c-video-player video {
+  flex: 0 0 100%;
+
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+
+  margin: 0 auto;
+
+  aspect-ratio: 16 / 10;
+  object-fit: fill;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+  box-sizing: border-box;
+}
+/* ==========================================================
+   Carousel Arrows
+========================================================== */
+
+.c-media-carousel .c-carousel-arrow {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 10;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+
+  background: var(--color-surface);
+  color: var(--color-accent);
+
+  font-size: 0;
+
+  cursor: pointer;
+}
+
+/* ==========================================================
+   Arrow Glyph
+========================================================== */
+
+.c-media-carousel .c-carousel-arrow::before {
+  display: block;
+
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+
+  position: relative;
+  top: -1px;
+}
+
+/* Left arrow */
+.c-media-carousel .c-carousel-arrow--left {
+  left: 0.25rem;
+}
+
+.c-media-carousel .c-carousel-arrow--left::before {
+  content: "‹";
+  transform: translateX(1px);
+}
+
+/* Right arrow */
+.c-media-carousel .c-carousel-arrow--right {
+  right: 0.25rem;
+}
+
+.c-media-carousel .c-carousel-arrow--right::before {
+  content: "›";
+  transform: translateX(-1px);
+}
+
+/* ==========================================================
+   Hover
+========================================================== */
+
+.c-media-carousel .c-carousel-arrow:hover {
+  background: var(--color-accent);
+  color: #000;
+
+  transform: translateY(-50%) scale(1.05);
+}
+/* ==========================================================
+   Carousel Dots
+========================================================== */
+
+.c-carousel-dots {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.4rem;
+
+  margin-top: 0.8rem;
+}
+
+.c-carousel-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--color-border);
+
+  cursor: pointer;
+}
+
+.c-carousel-dot.is-active {
+  width: 0.65rem;
+
+  border-radius: 999px;
+
+  background: var(--color-accent);
+}
+
+/* ==========================================================
+   Project Links Card
+========================================================== */
+
+.c-experience-card--links {
+  grid-column: 1 / -1;
+
+  height: auto;
+  min-height: 0;
+}
+
+/* ----------------------------------------------------------
+   Links Container
+---------------------------------------------------------- */
+
+.c-project-links {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 1rem;
+
+  margin-top: 1.25rem;
+}
+
+/* ----------------------------------------------------------
+   Individual Link Card
+---------------------------------------------------------- */
+
+.c-project-link {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.9rem;
+
+  padding: 0.8rem 1rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+
+  color: var(--color-text);
+
+  text-decoration: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* ----------------------------------------------------------
+   Icon
+---------------------------------------------------------- */
+
+.c-project-link__icon {
+  width: 2.6rem;
+  height: 2.6rem;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0.65rem;
+
+  background: rgb(94 228 255 / 0.08);
+
+  color: var(--color-accent);
+}
+
+.c-project-link__icon svg {
+  width: 1.45rem;
+  height: 1.45rem;
+
+  display: block;
+}
+
+/* ----------------------------------------------------------
+   Text
+---------------------------------------------------------- */
+
+.c-project-link__content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.2rem;
+}
+
+.c-project-link__content strong {
+  color: var(--color-text);
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+.c-project-link__content small {
+  color: var(--color-text-muted);
+
+  font-size: 0.7rem;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+/* ----------------------------------------------------------
+   External Link Icon
+---------------------------------------------------------- */
+
+.c-project-link__external {
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 1.2rem;
+
+  line-height: 1;
+}
+
+/* ----------------------------------------------------------
+   GitHub
+---------------------------------------------------------- */
+
+.c-project-link--github {
+  border-color: rgb(94 228 255 / 0.35);
+}
+
+.c-project-link--github .c-project-link__icon {
+  background: rgb(94 228 255 / 0.1);
+  color: var(--color-accent);
+}
+
+/* ----------------------------------------------------------
+   Documentation
+---------------------------------------------------------- */
+
+.c-project-link--documentation {
+  border-color: rgb(247 201 72 / 0.35);
+}
+
+.c-project-link--documentation .c-project-link__icon {
+  background: rgb(247 201 72 / 0.1);
+  color: #f7c948;
+}
+
+/* ----------------------------------------------------------
+   Demo
+---------------------------------------------------------- */
+
+.c-project-link--demo {
+  border-color: rgb(174 116 255 / 0.35);
+}
+
+.c-project-link--demo .c-project-link__icon {
+  background: rgb(174 116 255 / 0.1);
+  color: #ae74ff;
+}
+
+/* ----------------------------------------------------------
+   Hover
+---------------------------------------------------------- */
+
+.c-project-link:hover {
+  transform: translateY(-2px);
+
+  background: var(--color-surface);
+
+  border-color: var(--color-accent);
+}
+
+.c-project-link:hover .c-project-link__external {
+  color: var(--color-accent);
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 900px) {
+  .c-timeline-item {
+    margin-left: 3rem;
+  }
+
+  .c-timeline-item::before {
+    left: -2.8rem;
+  }
+
+  .c-timeline-item__title {
+    font-size: 2rem;
+  }
+
+  .c-expand-content.is-open {
+    grid-template-columns: 1fr;
+  }
+
+  .c-project-links {
+    grid-template-columns: 1fr;
+  }
+}

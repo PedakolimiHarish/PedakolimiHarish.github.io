@@ -1,13 +1,14 @@
 /* ==========================================================
    Experience Summary
 ========================================================== */
+
 .c-summary {
-  padding-top: 0.5rem; /* was var(--space-5) */
-  padding-bottom: 4rem; /* was var(--space-9) */
+  padding-top: 0.5rem;
+  padding-bottom: 4rem;
 }
 
 /* ==========================================================
-   Section
+   Summary Section
 ========================================================== */
 
 .c-summary-section + .c-summary-section {
@@ -29,7 +30,7 @@
 }
 
 /* ==========================================================
-   Two Column Layout
+   Summary Grid
 ========================================================== */
 
 .c-summary-grid {
@@ -44,7 +45,7 @@
 }
 
 /* ==========================================================
-   Item
+   Summary Item
 ========================================================== */
 
 .c-summary-item {
@@ -90,16 +91,134 @@
 }
 
 /* ==========================================================
+   Timeline Container
+========================================================== */
+
+.c-timeline {
+  position: relative;
+
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+}
+
+.c-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 1rem;
+
+  width: 2px;
+
+  background: var(--color-border);
+}
+
+/* ==========================================================
+   Lightbox
+========================================================== */
+
+.c-lightbox {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgb(0 0 0 / 75%);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.25s ease;
+
+  z-index: 5000;
+}
+
+.c-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ==========================================================
+   Lightbox Content
+========================================================== */
+
+.c-lightbox-content {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  max-width: 85vw;
+  max-height: 90vh;
+}
+
+/* ==========================================================
+   Lightbox Caption
+========================================================== */
+
+.c-lightbox-caption {
+  margin: 1rem 0 0;
+
+  max-width: 80vw;
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  text-align: center;
+
+  opacity: 0.9;
+}
+
+.c-lightbox-caption[hidden] {
+  display: none;
+}
+
+.c-lightbox img {
+  width: 70vw;
+  max-width: 1100px;
+  max-height: 70vh;
+
+  object-fit: contain;
+
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+
+  box-shadow: 0 25px 80px rgb(0 0 0 / 45%);
+
+  transition: transform 80ms ease;
+
+  cursor: grab;
+  user-select: none;
+
+  transform-origin: center center;
+}
+
+/* ==========================================================
    Responsive
 ========================================================== */
 
 @media (max-width: 900px) {
+  /* Summary */
+
   .c-summary-grid {
     grid-template-columns: 1fr;
+
     gap: var(--space-6);
   }
 
   .c-summary-section__title {
     font-size: 1.8rem;
+  }
+
+  /* Timeline */
+
+  .c-timeline::before {
+    left: 0.75rem;
   }
 }

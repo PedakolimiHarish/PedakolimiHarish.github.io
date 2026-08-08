@@ -1,0 +1,171 @@
+/* ==========================================================
+   Base Technology Badge
+========================================================== */
+
+.c-tech-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.55rem;
+
+  min-height: 2.25rem;
+
+  padding: 0.5rem 0.9rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+
+  color: var(--color-text);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   Icon
+========================================================== */
+
+.c-tech-badge__icon {
+  width: 18px;
+  height: 18px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+/* ==========================================================
+   Technology Badge Colors
+========================================================== */
+
+/* ROS 2 */
+.c-tech-badge--ros2 {
+  background: #424298;
+  border-color: #8e8cd0;
+  color: #f2f5f7;
+}
+
+/* C++ */
+.c-tech-badge--cpp {
+  background: #111b24;
+  border-color: #263b4d;
+  color: #f2f5f7;
+}
+
+/* Python */
+.c-tech-badge--python {
+  background: #141d24;
+  border-color: #304352;
+  color: #f2f5f7;
+}
+
+/* Arduino */
+.c-tech-badge--arduino {
+  background: #101f20;
+  border-color: #21484a;
+  color: #f2f5f7;
+}
+
+/* STM32 */
+.c-tech-badge--stm32 {
+  background: #5b2929;
+  border-color: #7f4e4e;
+  color: #f2f5f7;
+}
+
+/* ESP32 */
+.c-tech-badge--esp32 {
+  background: #17191c;
+  border-color: #353a40;
+  color: #f2f5f7;
+}
+
+/* OpenCV */
+.c-tech-badge--opencv {
+  background: #171d1b;
+  border-color: #35453f;
+  color: #f2f5f7;
+}
+
+/* Gazebo */
+.c-tech-badge--gazebo {
+  background: #151d22;
+  border-color: #344650;
+  color: #f2f5f7;
+}
+
+/* MoveIt */
+.c-tech-badge--moveit {
+  background: #181923;
+  border-color: #38394d;
+  color: #f2f5f7;
+}
+
+/* Docker */
+.c-tech-badge--docker {
+  background: #111d27;
+  border-color: #29465d;
+  color: #f2f5f7;
+}
+
+/* Git */
+.c-tech-badge--git {
+  background: #211817;
+  border-color: #49332f;
+  color: #f2f5f7;
+}
+
+/* Linux */
+.c-tech-badge--linux {
+  background: #1c1b17;
+  border-color: #403c30;
+  color: #f2f5f7;
+}
+
+/* Ubuntu */
+.c-tech-badge--ubuntu {
+  background: #211719;
+  border-color: #4b3034;
+  color: #f2f5f7;
+}
+
+/* Nav2 */
+.c-tech-badge--nav2 {
+  background: #131c22;
+  border-color: #304550;
+  color: #f2f5f7;
+}
+
+/* PyTorch */
+.c-tech-badge--pytorch {
+  background: #211b17;
+  border-color: #4a382c;
+  color: #f2f5f7;
+}
+
+/* Raspberry Pi */
+.c-tech-badge--raspberrypi {
+  background: #21171b;
+  border-color: #4a3039;
+  color: #f2f5f7;
+}
+
+/* AI */
+.c-tech-badge--ai {
+  background: #1c1825;
+  border-color: #44345b;
+  color: #f2f5f7;
+}
+
+/* YOLO */
+.c-tech-badge--yolo {
+  background: #1d1823;
+  border-color: #473653;
+  color: #f2f5f7;
+}
