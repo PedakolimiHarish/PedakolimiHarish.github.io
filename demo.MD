@@ -35,6 +35,8 @@ new-page/
 
   <script src="/assets/js/site.js" defer ></script>
 
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ab73527048e649f48a72e31f3aa3d1ca"}'></script><!-- End Cloudflare Web Analytics -->
+
 </head>
 
 <body class="page page--PAGE-NAME">

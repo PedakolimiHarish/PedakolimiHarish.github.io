@@ -489,20 +489,32 @@ function initializeExperienceComponents() {
 document.addEventListener("DOMContentLoaded", async () => {
   initializeCopyEmail();
 
-  /*
-   * If this is the Experience page, load
-   * the individual experience/project files.
-   *
-   * After loading, the project components are
-   * initialized automatically.
-   */
-
   await loadExperienceItems();
 
-  /*
-   * Initialize shared components that may already
-   * exist on pages without dynamically loaded items.
-   */
-
   initializeExperienceComponents();
+
+  /*
+   * Handle direct links to dynamically loaded experience items.
+   *
+   * Example:
+   * /experience/#mobile_3d_printer
+   *
+   * The browser processes the hash before the project HTML
+   * has been fetched, so we perform the scroll after loading.
+   */
+  const hash = window.location.hash;
+
+  if (hash) {
+    const targetId = decodeURIComponent(hash.substring(1));
+    const target = document.getElementById(targetId);
+
+    if (target) {
+      requestAnimationFrame(() => {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    }
+  }
 });
