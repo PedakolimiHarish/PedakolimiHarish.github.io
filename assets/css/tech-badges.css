@@ -46,8 +46,8 @@
 
 /* ROS 2 */
 .c-tech-badge--ros2 {
-  background: #424298;
-  border-color: #8e8cd0;
+  background: #7c4084;
+  border-color: #8c6691;
   color: #f2f5f7;
 }
 
@@ -167,5 +167,68 @@
 .c-tech-badge--yolo {
   background: #1d1823;
   border-color: #473653;
+  color: #f2f5f7;
+}
+
+/* Flask */
+.c-tech-badge--flask {
+  background: #211c1b;
+  border-color: #4a3935;
+  color: #f2f5f7;
+}
+
+/* NumPy */
+.c-tech-badge--numpy {
+  background: #182128;
+  border-color: #354b59;
+  color: #f2f5f7;
+}
+
+/* SciPy */
+.c-tech-badge--scipy {
+  background: #182029;
+  border-color: #35485a;
+  color: #f2f5f7;
+}
+
+/* Plotly */
+.c-tech-badge--plotly {
+  background: #211d27;
+  border-color: #473d52;
+  color: #f2f5f7;
+}
+
+/* JavaScript */
+.c-tech-badge--javascript {
+  background: #262316;
+  border-color: #514a2d;
+  color: #f2f5f7;
+}
+
+/* HTML */
+.c-tech-badge--html {
+  background: #261b1a;
+  border-color: #523733;
+  color: #f2f5f7;
+}
+
+/* 3D Printing */
+.c-tech-badge--printing3d {
+  background: #5b4632;
+  border-color: #5a4230;
+  color: #f2f5f7;
+}
+
+/* Duet3D */
+.c-tech-badge--duet3d {
+  background: #4a2761;
+  border-color: #493a55;
+  color: #f2f5f7;
+}
+
+/* CAD */
+.c-tech-badge--cad {
+  background: #2b4569;
+  border-color: #354252;
   color: #f2f5f7;
 }

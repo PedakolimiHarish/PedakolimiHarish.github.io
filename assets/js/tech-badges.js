@@ -110,6 +110,60 @@ const TECH_BADGES = {
     icon: "/assets/icons/yolo.svg",
     className: "c-tech-badge--yolo",
   },
+
+  flask: {
+    name: "Flask",
+    icon: "/assets/icons/flask.svg",
+    className: "c-tech-badge--flask",
+  },
+
+  numpy: {
+    name: "NumPy",
+    icon: "/assets/icons/numpy.svg",
+    className: "c-tech-badge--numpy",
+  },
+
+  scipy: {
+    name: "SciPy",
+    icon: "/assets/icons/scipy.svg",
+    className: "c-tech-badge--scipy",
+  },
+
+  plotly: {
+    name: "Plotly",
+    icon: "/assets/icons/plotly.svg",
+    className: "c-tech-badge--plotly",
+  },
+
+  javascript: {
+    name: "JavaScript",
+    icon: "/assets/icons/javascript.svg",
+    className: "c-tech-badge--javascript",
+  },
+
+  html: {
+    name: "HTML",
+    icon: "/assets/icons/html.svg",
+    className: "c-tech-badge--html",
+  },
+
+  printing3d: {
+    name: "3D Printing",
+    icon: "/assets/icons/3d_printing.svg",
+    className: "c-tech-badge--printing3d",
+  },
+
+  cad: {
+    name: "CAD",
+    icon: "/assets/icons/cad.svg",
+    className: "c-tech-badge--cad",
+  },
+
+  duet3d: {
+    name: "Duet3D",
+    icon: "/assets/icons/duet3d.svg",
+    className: "c-tech-badge--duet3d",
+  },
 };
 /* ==========================================================
    Badge Renderer

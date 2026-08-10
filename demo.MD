@@ -252,6 +252,19 @@ we have these now
 | Raspberry Pi | `raspberrypi` | <img src="assets/icons/raspberrypi.svg" width="24" height="24" alt="Raspberry Pi"> |
 | AI | `ai` | <img src="assets/icons/ai.svg" width="24" height="24" alt="AI"> |
 | YOLO | `yolo` | <img src="assets/icons/yolo.svg" width="24" height="24" alt="YOLO"> |
+| NumPy | `numpy` | <img src="assets/icons/numpy.svg" width="24" height="24" alt="numpy"> |
+| Flask | `flask` | <img src="assets/icons/flask.svg" width="24" height="24" alt="flask"> |
+| SciPy | `scipy` | <img src="assets/icons/scipy.svg" width="24" height="24" alt="scipy"> |
+| Plotly | `plotly` | <img src="assets/icons/plotly.svg" width="24" height="24" alt="plotly"> |
+| JavaScript | `javascript` | <img src="assets/icons/javascript.svg" width="24" height="24" alt="javascript"> |
+| HTML | `html` | <img src="assets/icons/html.svg" width="24" height="24" alt="html"> |
+| 3D Printing | `printing3d` | <img src="assets/icons/3d_printing.svg" width="24" height="24" alt="html"> |
+| CAD | `cad` | <img src="assets/icons/cad.svg" width="24" height="24" alt="html"> |
+| Duet3D | `duet3d` | <img src="assets/icons/duet3d.svg" width="24" height="24" alt="html"> |
+
+| LinkedIn |  | <img src="assets/icons/linkedin.svg" width="24" height="24" alt="html"> |
+| GitHub |  | <img src="assets/icons/github.svg" width="24" height="24" alt="html"> |
+| Robot |  | <img src="assets/icons/robot.svg" width="24" height="24" alt="html"> |
 
 ### Step 6 — Add Project Overview
 

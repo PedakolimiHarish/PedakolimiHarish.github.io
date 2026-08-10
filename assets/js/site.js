@@ -431,6 +431,16 @@ async function loadExperienceItems() {
   const experienceItems = [
     /* "/assets/experience_assets/project_demo/project_demo.html", */
     /* uncomment this if you want to test something */
+
+    "/assets/experience_assets/project_ember/project_ember.html",
+    "/assets/experience_assets/iit_bhilai/iit_bhilai.html",
+    "/assets/experience_assets/safefollow/safefollow.html",
+    "/assets/experience_assets/four_bar_workspace_envelope/four_bar_workspace_envelope.html",
+    "/assets/experience_assets/mobile_3d_printer/mobile_3d_printer.html",
+    "/assets/experience_assets/scara_construction/scara_construction.html",
+    "/assets/experience_assets/kelvin6k/kelvin6k.html",
+    "/assets/experience_assets/aibar/aibar.html",
+    "/assets/experience_assets/gitam_university/gitam_university.html",
   ];
 
   for (const itemPath of experienceItems) {

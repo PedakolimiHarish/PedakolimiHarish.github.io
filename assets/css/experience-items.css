@@ -197,11 +197,32 @@
 .c-expand-content.is-open {
   display: grid;
 
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
 
   gap: 1rem;
 
-  align-items: stretch;
+  align-items: start;
+}
+
+/* ==========================================================
+   Right Side Stack
+========================================================== */
+
+.c-experience-side {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+/* No Overview → Media/Links side uses full width */
+.c-expand-content.is-open:not(:has(.c-experience-card--overview))
+  .c-experience-side {
+  grid-column: 1 / -1;
 }
 
 @keyframes fadeDown {
@@ -222,7 +243,7 @@
 
 .c-experience-card {
   min-width: 0;
-  height: 34rem;
+  min-height: 0;
 
   padding: 1.5rem;
 
@@ -283,6 +304,7 @@
   display: flex;
   flex-direction: column;
 
+  height: 34rem;
   min-height: 34rem;
 }
 
@@ -353,16 +375,14 @@
 ========================================================== */
 
 .c-experience-card--media {
-  height: 34rem;
+  min-width: 0;
+  min-height: 0;
 
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
 
   gap: 1.5rem;
-
-  min-height: 0;
 }
-
 /* ==========================================================
    Media Section
 ========================================================== */
@@ -373,7 +393,10 @@
 
   display: flex;
   flex-direction: column;
+
   overflow: hidden;
+
+  flex: none;
 }
 
 /* ==========================================================
@@ -383,9 +406,9 @@
   position: relative;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
-  flex: 1;
+  flex: none;
 
   width: 100%;
   min-width: 0;
@@ -403,9 +426,9 @@
 
 .c-gallery-slider {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
-  flex: 1;
+  flex: none;
 
   gap: 1rem;
 
@@ -453,9 +476,9 @@
 
 .c-video-slider {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
-  flex: 1;
+  flex: none;
 
   width: 100%;
   min-width: 0;
@@ -779,8 +802,97 @@
 .c-experience-card--links {
   grid-column: 1 / -1;
 
-  height: auto;
+  min-width: 0;
   min-height: 0;
+
+  height: auto;
+}
+
+/* ==========================================================
+   Dynamic Card Layout
+========================================================== */
+
+/*
+   Card 1 + Card 2
+   ----------------
+   Both occupy the first row.
+   Card 2 matches Card 1's height.
+*/
+
+.c-expand-content.is-open:has(.c-experience-card--overview):has(
+    .c-experience-card--media
+  ) {
+  align-items: stretch;
+}
+
+.c-expand-content.is-open:has(.c-experience-card--overview):has(
+    .c-experience-card--media
+  )
+  .c-experience-card--overview,
+.c-expand-content.is-open:has(.c-experience-card--overview):has(
+    .c-experience-card--media
+  )
+  .c-experience-card--media {
+  height: 34rem;
+}
+
+/*
+   Card 1 + Card 3, but NO Card 2
+   --------------------------------
+   Both cards become full width.
+*/
+
+.c-expand-content.is-open:has(.c-experience-card--overview):not(
+    :has(.c-experience-card--media)
+  )
+  .c-experience-card--overview {
+  grid-column: 1 / -1;
+}
+
+/*
+   Card 2 + Card 3, but NO Card 1
+   --------------------------------
+   Media becomes full width.
+*/
+
+.c-expand-content.is-open:not(:has(.c-experience-card--overview)):has(
+    .c-experience-card--media
+  )
+  .c-experience-card--media {
+  grid-column: 1 / -1;
+}
+
+/*
+   Card 2 only
+   ------------
+   Media becomes full width.
+*/
+
+.c-expand-content.is-open:not(:has(.c-experience-card--overview)):has(
+    .c-experience-card--media
+  ):not(:has(.c-experience-card--links))
+  .c-experience-card--media {
+  grid-column: 1 / -1;
+}
+
+/*
+   Card 1 only
+   ------------
+   Overview becomes full width.
+*/
+
+.c-expand-content.is-open:has(.c-experience-card--overview):not(
+    :has(.c-experience-card--media)
+  ):not(:has(.c-experience-card--links))
+  .c-experience-card--overview {
+  grid-column: 1 / -1;
+}
+/* ==========================================================
+   Gallery Spacing
+========================================================== */
+
+.c-experience-card--media .c-media-header {
+  margin-bottom: 1.5rem;
 }
 
 /* ----------------------------------------------------------
@@ -789,12 +901,11 @@
 
 .c-project-links {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
 
-  gap: 1rem;
-
-  margin-top: 1.25rem;
+  width: 100%;
 }
 
 /* ----------------------------------------------------------
@@ -978,6 +1089,12 @@
 
   .c-expand-content.is-open {
     grid-template-columns: 1fr;
+  }
+
+  .c-experience-card--overview,
+  .c-experience-card--media,
+  .c-experience-card--links {
+    grid-column: 1 / -1;
   }
 
   .c-project-links {

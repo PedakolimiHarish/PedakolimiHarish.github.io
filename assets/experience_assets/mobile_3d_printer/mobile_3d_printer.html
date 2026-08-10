@@ -1,0 +1,180 @@
+<article class="c-timeline-item" id="mobile_3d_printer">
+  <!-- ========================================================
+       Project Header
+  ========================================================= -->
+
+  <div class="c-timeline-item__content">
+    <p class="c-timeline-item__year">2025/10 - 2026/3</p>
+
+    <div class="c-timeline-item__badges">
+      <span class="c-badge c-badge--personal"> Personal Project </span>
+
+      <span class="c-badge c-badge--concept">
+        Concept Validation / Simulation Complete
+      </span>
+    </div>
+
+    <h2 class="c-timeline-item__title">Mobile 3D Printer</h2>
+
+    <p class="c-timeline-item__subtitle">
+      Mobile Robotic Platform for Large-Scale Construction 3D Printing
+    </p>
+
+    <!-- ======================================================
+         Brief Summary
+    ======================================================= -->
+
+    <div class="c-timeline-item__summary">
+      <p>
+        Mobile 3D Printer is a simulation-validated concept for a mobile robotic
+        platform designed for continuous, large-scale construction 3D printing.
+        The project combines a differential-drive mobile base with a cylindrical
+        manipulator and extrusion tool, with the long-term goal of printing
+        complete structures such as houses.
+      </p>
+    </div>
+
+    <!-- ======================================================
+         Technology Badges
+    ======================================================= -->
+
+    <ul
+      class="c-tech-list"
+      data-tech="ros2 cpp python gazebo docker git linux ubuntu printing3d"
+      aria-label="Technologies used in Project"
+    ></ul>
+
+    <!-- ======================================================
+         Expand
+    ======================================================= -->
+
+    <button
+      class="c-read-more"
+      type="button"
+      data-expand-button
+      aria-expanded="false"
+    >
+      Read More ↓
+    </button>
+
+    <div class="c-expand-content">
+      <!-- ====================================================
+           Card 1 — Project Overview
+      ===================================================== -->
+
+      <section class="c-experience-card c-experience-card--overview">
+        <div class="c-card-header">
+          <h3 class="c-card-title">
+            <svg class="c-section-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 3h9l3 3v15H6V3z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+
+              <path
+                d="M9 11h6M9 15h6M9 7h3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+
+            Project Overview
+          </h3>
+        </div>
+
+        <div class="c-project-info__content">
+          <p>
+            The project explores a mobile robotic construction 3D printer
+            designed to overcome the fixed workspace limitations of conventional
+            large-format printers. The platform combines a differential-drive
+            mobile base with a cylindrical robotic manipulator carrying an
+            extrusion tool, allowing the printer to reposition itself while
+            continuing the construction process.
+          </p>
+
+          <p>
+            The current implementation focuses on idea and architecture
+            validation through a complete Gazebo simulation. The simulation was
+            used to evaluate the overall robotic concept, including mobile-base
+            movement, manipulator operation, printing workflows, and the
+            interaction between the mobile platform and printing system.
+          </p>
+
+          <p>
+            The software architecture was designed around a layered robotics
+            approach: deterministic firmware for motion execution, ROS 2 for
+            robot control and localization, ROS 2-based verification and
+            visualization, G-code/toolpath processing, and coordinated
+            mobile-base and manipulator motion
+          </p>
+
+          <p>
+            The long-term objective is a system capable of large-scale,
+            continuous construction printing, where the robot can move through a
+            construction site while depositing material and progressively
+            building a complete structure. The current simulation represents an
+            initial feasibility and architecture study; physical development is
+            planned for a later phase, with the architecture expected to be
+            substantially revisited when hardware development begins.
+          </p>
+        </div>
+      </section>
+
+      <!-- ====================================================
+           Card 3 — Project Links
+      ===================================================== -->
+
+      <section class="c-experience-card c-experience-card--links">
+        <div class="c-card-header">
+          <h3 class="c-card-title">
+            <svg class="c-section-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M10 14a4 4 0 0 0 5.7.3l3-3a4 4 0 0 0-5.7-5.7l-1.7 1.7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M14 10a4 4 0 0 0-5.7-.3l-3 3A4 4 0 0 0 8 18.4l1.7-1.7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+
+            Project Links
+          </h3>
+        </div>
+
+        <div class="c-project-links">
+          <!-- GitHub -->
+          <a
+            class="c-project-link c-project-link--github"
+            href="https://github.com/PedakolimiHarish/Mobile_3d_Printer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="c-project-link__icon" aria-hidden="true">
+              <img src="/assets/icons/github.svg" alt="" />
+            </span>
+
+            <span class="c-project-link__content">
+              <strong>GitHub Repository</strong>
+              <small>View source code and contribute</small>
+            </span>
+
+            <span class="c-project-link__external" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</article>
